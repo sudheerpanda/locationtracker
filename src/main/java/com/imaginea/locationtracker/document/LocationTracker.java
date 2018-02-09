@@ -11,17 +11,14 @@ public class LocationTracker {
     private Integer id;
     private String currentLoc;
     private Long speed;
+    private String source;
+    private String destination;
     private Object other;
     public  LocationTracker(){
 
     }
 
-    public LocationTracker(Integer id, String currentLoc, Long speed, Object other) {
-        this.id = id;
-        this.currentLoc = currentLoc;
-        this.speed = speed;
-        this.other = other;
-    }
+
 
     public Integer getId() {
         return id;
@@ -54,4 +51,21 @@ public class LocationTracker {
     public void setOther(Object other) {
         this.other = other;
     }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+    
 }
