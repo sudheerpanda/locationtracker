@@ -7,6 +7,4 @@ import java.util.Date;
 
 public interface LocationTrackerRepository extends MongoRepository<LocationTracker,String>{
     LocationTracker findByVehiclesVehicleId(String vehicleId);
-
-    LocationTracker findByTimestamp(Date date);
 }
