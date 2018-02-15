@@ -5,8 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
-public class LocTracker {
-
+public class Vehicle {
     private String vehicle;
     private String vehicleId;
     private String latitude;
@@ -14,14 +13,11 @@ public class LocTracker {
     private int speed;
     private long distance;
     private Date timestamp;
-    private Asset asset;
-    private User user;
-    private Object other;
 
-    public LocTracker() {
+    public Vehicle() {
     }
 
-    public LocTracker(String vehicle, String vehicleId, String latitude, String longitude, int speed, long distance, Date timestamp, Asset asset, User user, Object other) {
+    public Vehicle(String vehicle, String vehicleId, String latitude, String longitude, int speed, long distance, Date timestamp) {
         this.vehicle = vehicle;
         this.vehicleId = vehicleId;
         this.latitude = latitude;
@@ -29,9 +25,6 @@ public class LocTracker {
         this.speed = speed;
         this.distance = distance;
         this.timestamp = timestamp;
-        this.asset = asset;
-        this.user = user;
-        this.other = other;
     }
 
     public String getVehicle() {
@@ -89,29 +82,4 @@ public class LocTracker {
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
-
-    public Asset getAsset() {
-        return asset;
-    }
-
-    public void setAsset(Asset asset) {
-        this.asset = asset;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Object getOther() {
-        return other;
-    }
-
-    public void setOther(Object other) {
-        this.other = other;
-    }
 }
-
